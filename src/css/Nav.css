@@ -15,7 +15,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .items {
@@ -46,7 +46,7 @@ nav {
     margin-top: 50px;
   }
   .items {
-    width: 100%;
+    width: 120%;
     border-top: 1px solid rgba(225, 225, 225, 0.555);
     text-align: center;
     margin-right: 0px;
@@ -57,11 +57,24 @@ nav {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 539px) {
   .containerN {
-    margin-bottom: 60px;
+    margin-bottom: 50px !important;
+  }
+  /* .container-card {
+    margin-top: 30px;
+  } */
+}
+
+/* @media screen and (max-width: 540px) {
+  .containerN {
+    margin-bottom: 65px !important;
   }
   .container-card {
     margin-top: 30px;
   }
+}  */
+
+.containerN {
+  margin-bottom: 65px;
 }

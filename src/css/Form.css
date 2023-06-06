@@ -3,6 +3,8 @@
   grid-template-columns: 50% 50%;
   padding: 10px;
   margin-top: 20px;
+  gap: 0.5rem;
+  background-color: black;
 }
 
 @media screen and (max-width: 500px) {
@@ -13,15 +15,6 @@
     display: grid;
     grid-template-columns: 100%;
   }
-  /* .card {
-    background-color: red;
-    grid-template-columns: 100%;
-    display: grid;
-  } */
-
-  .card {
-    background-color: red;
-  }
 }
 
 .grid-even-columns {
@@ -30,6 +23,8 @@
   grid-template-columns: 50% 1fr;
   justify-content: center;
   align-items: center;
+  background-color: #344e41;
+  padding: 10px;
 }
 @media screen and (max-width: 500px) {
   .grid-even-columns {
@@ -40,10 +35,14 @@
 .grid-one-columns {
   display: grid;
   place-items: center;
+  background-color: #a3b18a;
 }
 
 .icon {
   text-align: center;
+  color: pink;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+≈
 }
 
 .fa-icon {
@@ -63,11 +62,6 @@ h4,
   text-align: center;
   justify-content: center;
 }
-/* @media screen and (max-width: 500px) {
-  .grid-one-columns {
-    grid-template-columns: 50%;
-  }
-} */
 
 input[type="text"],
 select {
@@ -79,12 +73,8 @@ select {
   resize: vertical;
 }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: absolute;
-}
 input[type="submit"] {
-  background-color: #04aa6d;
+  background-color: pink;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -92,139 +82,13 @@ input[type="submit"] {
   cursor: pointer;
   float: right;
 }
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-*/ .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .col-25,
-  .col-75,
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-/* .column {
-  width: 50%;
-  padding: 10px;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
 
 .card {
-  /* Add shadows to create the "card" effect */
-
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
-
-/* .col1 {
-  background-color: #344e41;
-  color: white;
-}
-
-.col2 {
-  background-color: #a3b18a;
-  color: white;
-}
-h4,
-.name {
-  text-align: center;
-  justify-content: center;
-} */
-
-@media screen and (max-width: 500px) {
-  input[type="submit"] {
-    margin-bottom: 100px;
-    margin-top: 10px;
-  }
-  .column {
-    height: 75vh;
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 400px) and (max-width: 600px) {
-  input[type="submit"] {
-    background-color: pink;
-    color: blue;
-    margin-top: 10px;
-  }
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  background-color: DodgerBlue;
-}
-
-.flex-container > div {
-  background-color: red;
-  width: 50vw;
-
-  text-align: center;
-
-  height: 50vh;
-}
-
-@media screen and (max-width: 500px) {
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    background-color: DodgerBlue;
-  }
-
-  .flex-container > div {
-    background-color: red;
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
 }
