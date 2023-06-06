@@ -23,20 +23,22 @@ const Nav = () => {
 
   return (
     <>
-      <nav>
-        {(toggleMenu || screenWidth > 500) && (
-          <ul className="list">
-            <li className="items">Home</li>
-            <li className="items">About</li>
-            <li className="items">Calories</li>
-            <li className="items">Map</li>
-          </ul>
-        )}
+      <div className="containerN">
+        <nav>
+          {(toggleMenu || screenWidth > 500) && (
+            <ul className="list">
+              <li className="items">Home</li>
+              <li className="items">About</li>
+              <li className="items">Calories</li>
+              <li className="items">Map</li>
+            </ul>
+          )}
 
-        <button onClick={toggleNav} className="btn">
-          BTN
-        </button>
-      </nav>
+          <button onClick={toggleNav} className="btn">
+            BTN
+          </button>
+        </nav>
+      </div>
     </>
   );
 };

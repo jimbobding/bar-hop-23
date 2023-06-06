@@ -1,3 +1,74 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  /* .card {
+    background-color: red;
+    grid-template-columns: 100%;
+    display: grid;
+  } */
+
+  .card {
+    background-color: red;
+  }
+}
+
+.grid-even-columns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 50% 1fr;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .grid-even-columns {
+    grid-template-columns: 50%;
+  }
+}
+
+.grid-one-columns {
+  display: grid;
+  place-items: center;
+}
+
+.icon {
+  text-align: center;
+}
+
+.fa-icon {
+  padding: 2px;
+}
+
+.card-container {
+  padding: 2px 16px;
+  background-color: #a3b18a;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+h4,
+.name {
+  text-align: center;
+  justify-content: center;
+}
+/* @media screen and (max-width: 500px) {
+  .grid-one-columns {
+    grid-template-columns: 50%;
+  }
+} */
+
 input[type="text"],
 select {
   width: 100%;
@@ -10,9 +81,8 @@ select {
 
 label {
   padding: 12px 12px 12px 0;
-  display: inline-block;
+  display: absolute;
 }
-
 input[type="submit"] {
   background-color: #04aa6d;
   color: white;
@@ -27,8 +97,7 @@ input[type="submit"] {
   width: 25%;
   margin-top: 6px;
 }
-
-.col-75 {
+*/ .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
@@ -49,36 +118,19 @@ input[type="submit"] {
   }
 }
 
-/* Style the image inside the centered container, if needed */
-.centered img {
-  width: 150px;
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 600px) {
-  .centered {
-    position: absoloute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
 
 /* Create two equal columns that floats next to each other */
-.column {
-  float: left;
+/* .column {
   width: 50%;
   padding: 10px;
-  height: 50vh; /* Should be removed. Only for demonstration */
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* Clear floats after the columns */
 .row:after {
@@ -108,11 +160,8 @@ input[type="submit"] {
 }
 
 /* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
 
-.col1 {
+/* .col1 {
   background-color: #344e41;
   color: white;
 }
@@ -125,21 +174,57 @@ h4,
 .name {
   text-align: center;
   justify-content: center;
-}
+} */
 
-@media screen and (min-width: 120px) and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   input[type="submit"] {
-    background-color: red;
-    color: blue;
     margin-bottom: 100px;
     margin-top: 10px;
   }
+  .column {
+    height: 75vh;
+    margin-bottom: 0px;
+  }
 }
 
-/* @media screen and (min-width: 400px) and (max-width: 600px) {
+@media screen and (min-width: 400px) and (max-width: 600px) {
   input[type="submit"] {
     background-color: pink;
     color: blue;
     margin-top: 10px;
   }
-} */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: red;
+  width: 50vw;
+
+  text-align: center;
+
+  height: 50vh;
+}
+
+@media screen and (max-width: 500px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+  }
+
+  .flex-container > div {
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
